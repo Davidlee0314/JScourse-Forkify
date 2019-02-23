@@ -30,6 +30,8 @@ export default class Like{
 	}
 
 	readData(){
-		this.likes = JSON.parse(localStorage.getItem("like"))
+		if(JSON.parse(localStorage.getItem("like"))){
+			this.likes = JSON.parse(localStorage.getItem("like"))
+		}
 	}
 }
